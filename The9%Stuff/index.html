@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>The 9% Stuff - GitMastery</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../The1%25Stuff/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../The1%25Stuff/" class="btn btn-xs btn-link">
+        The 1% Stuff
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../The90%25Stuff/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../The90%25Stuff/" class="btn btn-xs btn-link">
+        The 90% Stuff
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <p>Contains the commands which we use <strong>rarely</strong> or occasionally</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>*&lt;pattern&gt;*<span class="w"> </span>-u<span class="w"> </span><span class="c1">#Add all files to the staging area except the ones containing a specific pattern</span>
+git<span class="w"> </span>mv<span class="w"> </span>&lt;old-file-name&gt;<span class="w"> </span>&lt;new-file-name&gt;<span class="w"> </span><span class="c1">#Rename a file</span>
+
+
+git<span class="w"> </span>commit<span class="w"> </span><span class="c1">#Opens the default editor</span>
+
+<span class="c1">#Changing Commit History</span>
+git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span><span class="c1">#Change the last commit</span>
+git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;new-commit-message&gt;&quot;</span><span class="w"> </span><span class="c1">#Change the last commit with a new message</span>
+git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>--no-edit<span class="w"> </span><span class="c1">#Change the last commit without a new message</span>
+
+
+git<span class="w"> </span>diff<span class="w"> </span>--shortstat<span class="w"> </span><span class="c1">#View the changes in the working directory in a short format</span>
+git<span class="w"> </span>diff<span class="w"> </span>--stat<span class="w"> </span><span class="c1">#View the changes in the working directory in a short format</span>
+git<span class="w"> </span>diff<span class="w"> </span>--name-only<span class="w"> </span><span class="c1">#View the changes in the working directory in a short format</span>
+git<span class="w"> </span>diff<span class="w"> </span>--name-status<span class="w"> </span><span class="c1">#View the changes in the working directory in a short format</span>
+
+git<span class="w"> </span>rm<span class="w"> </span>--cached<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#Remove a file from staging area only</span>
+
+git<span class="w"> </span>log<span class="w"> </span>--name-only<span class="w"> </span><span class="c1">#See the list of modified files in each commit</span>
+git<span class="w"> </span>log<span class="w"> </span>--name-status<span class="w"> </span><span class="c1">#See the list of modified files in each commit</span>
+git<span class="w"> </span>log<span class="w"> </span>--stat<span class="w"> </span><span class="c1">#See the list of modified files in each commit</span>
+
+<span class="c1">#Filtering History</span>
+git<span class="w"> </span>log<span class="w"> </span>--author<span class="o">=</span><span class="s2">&quot;&lt;author-name&gt;&quot;</span><span class="w"> </span><span class="c1">#Filter by author</span>
+git<span class="w"> </span>log<span class="w"> </span>--author<span class="o">=</span><span class="s2">&quot;&lt;author-name1&gt;\|&lt;author-name2&gt;&quot;</span>
+<span class="c1">#Filter by time</span>
+git<span class="w"> </span>log<span class="w"> </span>--since<span class="o">=</span><span class="s2">&quot;&lt;date&gt;&quot;</span>
+git<span class="w"> </span>log<span class="w"> </span>--until<span class="o">=</span><span class="s2">&quot;&lt;date&gt;&quot;</span>
+git<span class="w"> </span>log<span class="w"> </span>--after<span class="o">=</span><span class="s2">&quot;&lt;date&gt;&quot;</span>
+git<span class="w"> </span>log<span class="w"> </span>--before<span class="o">=</span><span class="s2">&quot;&lt;date&gt;&quot;</span>
+git<span class="w"> </span>log<span class="w"> </span>--after<span class="o">=</span><span class="s2">&quot;&lt;date1&gt;&quot;</span><span class="w"> </span>--before<span class="o">=</span><span class="s2">&quot;&lt;date2&gt;&quot;</span>
+
+<span class="c1">#Filter by commit message keyword</span>
+git<span class="w"> </span>log<span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;&lt;pattern&gt;&quot;</span>
+git<span class="w"> </span>log<span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;&lt;pattern1&gt;\|&lt;pattern2&gt;&quot;</span>
+git<span class="w"> </span>log<span class="w"> </span>-S<span class="s2">&quot;&lt;keyword&gt;&quot;</span><span class="w"> </span><span class="c1">#Filter by content keyword</span>
+git<span class="w"> </span>log<span class="w"> </span>--<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#See all commits that modifed or deleted a file</span>
+
+git<span class="w"> </span>blame<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#Finding author of the line</span>
+git<span class="w"> </span>blame<span class="w"> </span>-L&lt;start&gt;,&lt;end&gt;<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#Specify range of line</span>
+git<span class="w"> </span>show<span class="w"> </span>--stat<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#View the changes in a commit in a short format</span>
+git<span class="w"> </span>show<span class="w"> </span>--name-only<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#View the changes in a commit in a short format</span>
+git<span class="w"> </span>show<span class="w"> </span>--name-status<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#View the changes in a commit in a short format</span>
+
+git<span class="w"> </span>clean<span class="w"> </span>-fd<span class="w"> </span><span class="c1">#Clean all untracked files</span>
+git<span class="w"> </span>restore<span class="w"> </span>--source<span class="o">=</span>HEAD~2<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#restore older version of file</span>
+
+<span class="c1">#Aliasing</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.&lt;alias-name&gt;<span class="w"> </span>&lt;command&gt;<span class="w"> </span><span class="c1">#Create an alias</span>
+
+<span class="c1">#Bisect command</span>
+git<span class="w"> </span>bisect<span class="w"> </span>start
+git<span class="w"> </span>bisect<span class="w"> </span>bad
+git<span class="w"> </span>bisect<span class="w"> </span>good<span class="w"> </span>&lt;commit-hash&gt;
+git<span class="w"> </span>bisect<span class="w"> </span>reset
+
+<span class="c1">#Tagging</span>
+git<span class="w"> </span>tag<span class="w"> </span>&lt;tag-name&gt;<span class="w"> </span><span class="c1">#Create a tag</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>&lt;tag-name&gt;<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;tag-message&gt;&quot;</span><span class="w"> </span><span class="c1">#Create an annotated tag with a message</span>
+git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>&lt;tag-name&gt;<span class="w"> </span><span class="c1">#delete a tag</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;tag-name&gt;<span class="w"> </span><span class="c1">#push a tag to remote</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--tags<span class="w"> </span><span class="c1">#push all tags to remote</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>&lt;tag-name&gt;<span class="w"> </span><span class="c1">#delete a tag that is in origin</span>
+
+git<span class="w"> </span>branch<span class="w"> </span>-r<span class="w"> </span><span class="c1">#View remote branches</span>
+git<span class="w"> </span>branch<span class="w"> </span>-a<span class="w"> </span><span class="c1">#View all branches</span>
+git<span class="w"> </span>branch<span class="w"> </span>-v<span class="w"> </span><span class="c1">#View the branches in a short format</span>
+
+<span class="c1">#Stashing</span>
+git<span class="w"> </span>stash<span class="w"> </span>push<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;stash-message&gt;&quot;</span><span class="w"> </span><span class="c1">#Stash the changes in the working directory</span>
+git<span class="w"> </span>stash<span class="w"> </span>save<span class="w"> </span><span class="s2">&quot;&lt;stash-message&gt;&quot;</span><span class="w"> </span><span class="c1">#Stash the changes in the working directory with a message</span>
+git<span class="w"> </span>stash<span class="w"> </span>list<span class="w"> </span><span class="c1">#View the stashes</span>
+git<span class="w"> </span>stash<span class="w"> </span>apply<span class="w"> </span>&lt;stash-name&gt;<span class="w"> </span><span class="c1">#Apply a stash</span>
+git<span class="w"> </span>stash<span class="w"> </span>show<span class="w"> </span>&lt;stash-name&gt;<span class="w"> </span><span class="c1">#View the changes in a stash</span>
+git<span class="w"> </span>stash<span class="w"> </span>pop<span class="w"> </span>&lt;stash-name&gt;<span class="w"> </span><span class="c1">#Apply a stash and remove it from the list</span>
+git<span class="w"> </span>stash<span class="w"> </span>drop<span class="w"> </span>&lt;stash-name&gt;<span class="w"> </span><span class="c1">#Remove a stash from the list</span>
+git<span class="w"> </span>stash<span class="w"> </span>clear<span class="w"> </span><span class="c1">#Clear all the stashes</span>
+
+<span class="c1">#Reverting Commits</span>
+git<span class="w"> </span>revert<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#Revert a commit</span>
+git<span class="w"> </span>revert<span class="w"> </span>-e<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#Revert a commit and edit the commit message</span>
+git<span class="w"> </span>revert<span class="w"> </span>--no-edit<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#Revert a commit and skip the commit message</span>
+git<span class="w"> </span>revert<span class="w"> </span>-n<span class="w"> </span>&lt;commit-hash1&gt;<span class="w"> </span>&lt;commit-hash2&gt;<span class="w"> </span><span class="c1">#Revert multiple commits without creating multiple revert commits</span>
+</code></pre></div>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../The1%25Stuff/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../The1%25Stuff/" class="btn btn-xs btn-link">
+        The 1% Stuff
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../The90%25Stuff/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../The90%25Stuff/" class="btn btn-xs btn-link">
+        The 90% Stuff
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="None">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>
