@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>The 90% Stuff - GitMastery</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+    <script src="../js/base.js"></script>
+      <script src="../search/main.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../The9%25Stuff/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../The9%25Stuff/" class="btn btn-xs btn-link">
+        The 9% Stuff
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../MasteringGit/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../MasteringGit/" class="btn btn-xs btn-link">
+        Mastering Git
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <p>Contains the commands which we use <strong>most of the time</strong>.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>init<span class="w"> </span><span class="c1">#Initilize a git repository</span>
+
+<span class="c1">#Staging Files</span>
+git<span class="w"> </span>add<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#Add a file to the staging area</span>
+git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="c1">#Add all the files to the staging area</span>
+git<span class="w"> </span>add<span class="w"> </span>*&lt;pattern&gt;*<span class="w"> </span><span class="c1">#Add all files containing a specific pattern to the staging area</span>
+
+<span class="c1">#Unstaging Files</span>
+git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#Unstage a file</span>
+
+<span class="c1">#Viewing Status</span>
+git<span class="w"> </span>status<span class="w"> </span><span class="c1">#View the status of the files in the staging area</span>
+git<span class="w"> </span>status<span class="w"> </span>-s<span class="w"> </span><span class="c1">#View the status of the files in the staging area in a short format</span>
+
+<span class="c1">#Committing Changes</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;commit-message&gt;&quot;</span><span class="w"> </span><span class="c1">#Commit the changes in the staging area</span>
+git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;&lt;commit-message&gt;&quot;</span><span class="w"> </span><span class="c1">#Skip the staging area</span>
+
+<span class="c1">#Viewing Local Changes</span>
+git<span class="w"> </span>diff<span class="w"> </span><span class="c1">#View the changes in the working directory</span>
+git<span class="w"> </span>diff<span class="w"> </span>--staged<span class="w"> </span><span class="c1">#View the changes in the staging area</span>
+git<span class="w"> </span>diff<span class="w"> </span>--cached<span class="w"> </span><span class="c1">#Same as --staged</span>
+
+<span class="c1">#Comparing Commits</span>
+git<span class="w"> </span>diff<span class="w"> </span>&lt;commit-hash1&gt;..&lt;commit-hash2&gt;<span class="w"> </span><span class="c1">#Compare two commits</span>
+
+<span class="c1">#Removing Files</span>
+git<span class="w"> </span>rm<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#Remove a file from the working directory and the staging area</span>
+
+<span class="c1">#Viewing Commit History</span>
+git<span class="w"> </span>log<span class="w"> </span><span class="c1">#View the commit history</span>
+git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span><span class="c1">#View the commit history in a short format</span>
+git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--oneline<span class="w"> </span>--all<span class="w"> </span><span class="c1">#View short commit hsitory but  all commits in graph</span>
+git<span class="w"> </span>log<span class="w"> </span>--reverse<span class="w"> </span><span class="c1">#Show in reverse order</span>
+git<span class="w"> </span>log<span class="w"> </span>-10<span class="w"> </span>--reverse<span class="w"> </span><span class="c1">#See only last 10 commits in reverse order</span>
+git<span class="w"> </span>log<span class="w"> </span>&lt;commit-hash1&gt;..&lt;commit-hash2&gt;<span class="w"> </span><span class="c1">#See range of commits</span>
+git<span class="w"> </span>log<span class="w"> </span>--patch<span class="w"> </span><span class="c1">#See the actual changes in each commit</span>
+
+<span class="c1">#Viewing a Commit</span>
+git<span class="w"> </span>show<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#View the changes in a commit</span>
+git<span class="w"> </span>show<span class="w"> </span>HEAD~2<span class="w"> </span><span class="c1">#view commit two steps back</span>
+git<span class="w"> </span>show<span class="w"> </span>&lt;commit-hash&gt;:path/to/file<span class="w"> </span><span class="c1">#View specific file in a commit</span>
+
+<span class="c1">#Discarding Local Changes</span>
+git<span class="w"> </span>restore<span class="w"> </span>&lt;file-name&gt;<span class="w"> </span><span class="c1">#Discard changes in the working directory</span>
+git<span class="w"> </span>restore<span class="w"> </span>.<span class="w"> </span><span class="c1">#Discard all changes in the working directory</span>
+
+<span class="c1">#Ignoring Files</span>
+touch<span class="w"> </span>.gitignore<span class="w"> </span><span class="c1">#Create a .gitignore file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&lt;file-name&gt;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore<span class="w"> </span><span class="c1">#Add files to .gitignore</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&lt;pattern&gt;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore<span class="w"> </span><span class="c1">#Add files to .gitignore</span>
+
+<span class="c1">#Detached HEAD State</span>
+git<span class="w"> </span>checkout<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#Switch to a commit</span>
+
+<span class="c1">#Branching</span>
+git<span class="w"> </span>branch<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1">#Create a branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1">#Switch to a branch</span>
+git<span class="w"> </span>switch<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1">#Newer way</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1">#Create a branch and switch to it</span>
+git<span class="w"> </span>switch<span class="w"> </span>-C<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1">#Newer way</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1">#Delete a branch</span>
+git<span class="w"> </span>branch<span class="w"> </span><span class="c1">#View the branches</span>
+git<span class="w"> </span>branch<span class="w"> </span>--merged<span class="w"> </span><span class="c1">#View merged branches</span>
+git<span class="w"> </span>branch<span class="w"> </span>--no-merged<span class="w"> </span><span class="c1">#View unmerged branches</span>
+git<span class="w"> </span>branch<span class="w"> </span>-vv<span class="w"> </span><span class="c1">#View local and remote tracking branches</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1">#Push a branch to the remote repository</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span><span class="c1">#Delete a branch from the remote repository</span>
+
+<span class="c1">#Merge a branch</span>
+git<span class="w"> </span>merge<span class="w"> </span>&lt;branch-name&gt;<span class="w">  </span><span class="c1">#merges to current branch</span>
+git<span class="w"> </span>merge<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span>--no-ff<span class="w"> </span><span class="c1">#Merge a branch with --no-ff</span>
+git<span class="w"> </span>merge<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span>--ff-only<span class="w"> </span><span class="c1">#Merge a branch with --ff-only</span>
+git<span class="w"> </span>merge<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span>--squash<span class="w"> </span><span class="c1">#Merge a branch with --squash</span>
+git<span class="w"> </span>merge<span class="w"> </span>--abort<span class="w"> </span><span class="c1">#Abort a merge</span>
+git<span class="w"> </span>merge<span class="w"> </span>--continue<span class="w"> </span><span class="c1">#Continue a merge</span>
+
+<span class="c1">#Revert a merge</span>
+git<span class="w"> </span>revert<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#1 is the parent number of the commit</span>
+
+<span class="c1">#Rebasing</span>
+git<span class="w"> </span>rebase<span class="w"> </span>&lt;branch-name&gt;<span class="w">  </span><span class="c1">#rebases current branch to &lt;branch-name&gt;</span>
+git<span class="w"> </span>rebase<span class="w"> </span>--abort<span class="w"> </span><span class="c1">#Abort a rebase</span>
+git<span class="w"> </span>rebase<span class="w"> </span>--continue<span class="w"> </span><span class="c1">#Continue a rebase</span>
+git<span class="w"> </span>rebase<span class="w"> </span>--skip<span class="w"> </span><span class="c1">#Skip a commit during rebase</span>
+git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>&lt;commit-hash&gt;<span class="w"> </span><span class="c1">#Edit a commit during rebase</span>
+
+<span class="c1">#Collaborating</span>
+git<span class="w"> </span>clone<span class="w"> </span>&lt;repository-url&gt;<span class="w"> </span><span class="c1">#Clone a repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>&lt;repository-url&gt;<span class="w"> </span>&lt;local-repository-name&gt;<span class="w"> </span><span class="c1">#Give name to the repository in local</span>
+
+<span class="c1">#Getting changes from remote</span>
+git<span class="w"> </span>fetch<span class="w"> </span><span class="c1">#Fetch the changes from the remote repository</span>
+git<span class="w"> </span>pull<span class="w"> </span><span class="c1">#Fetch the changes from the remote repository and merge them</span>
+git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span><span class="c1">#Fetch the changes from the remote repository and rebase them</span>
+git<span class="w"> </span>push<span class="w"> </span><span class="c1">#Push the changes to the remote repository</span>
+
+<span class="c1">#Managing Remotes</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>&lt;remote-name&gt;<span class="w"> </span>&lt;repository-url&gt;<span class="w"> </span><span class="c1">#Add a remote repository</span>
+git<span class="w"> </span>remote<span class="w"> </span><span class="c1">#View the remote repositories</span>
+git<span class="w"> </span>remote<span class="w"> </span>-v<span class="w"> </span><span class="c1">#View the remote repositories in a verbose format</span>
+git<span class="w"> </span>remote<span class="w"> </span>rename<span class="w"> </span>&lt;old-remote-name&gt;<span class="w"> </span>&lt;new-remote-name&gt;<span class="w"> </span><span class="c1">#Rename a remote repository</span>
+
+<span class="c1">#Undoing commits</span>
+git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1<span class="w"> </span><span class="c1">#Undo the last commit</span>
+git<span class="w"> </span>reset<span class="w"> </span>HEAD~1<span class="w"> </span><span class="c1">#Undo the last commit and unstage the changes</span>
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1<span class="w"> </span><span class="c1">#Undo the last commit and discard the changes</span>
+</code></pre></div>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../The9%25Stuff/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../The9%25Stuff/" class="btn btn-xs btn-link">
+        The 9% Stuff
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../MasteringGit/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../MasteringGit/" class="btn btn-xs btn-link">
+        Mastering Git
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="None">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>
