@@ -898,7 +898,7 @@ See below diagram
 1. Both contributors first clone the repository from the central repository. Now, they both have a local repository on their machine.
 2. So, persons A and B start working and make some commitments. After some point in time, A wants to share his work. To do that, he uses the push command to send his changes to the central repository.
 3. The central repository is now in sync with A's work. Now, B gets the changes from the main repository using the pull command.
-4. If B has any conflicts, she will resolve the conflicts and push the changes.
+4. If B has any conflicts, B will resolve the conflicts and push the changes.
 5. A will after pull these changes.
 
 ![cw-1](./img/cw-1.png)
