@@ -1,0 +1,19 @@
+site_name: GitMastery
+nav:
+  - Home: index.md
+  - Mastering Git: MasteringGit.md
+  - The 90% Stuff: The90%Stuff.md
+  - The 9% Stuff: The9%Stuff.md
+  - The 1% Stuff: The1%Stuff.md
+theme:
+  name: windmill-dark
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+      separator: "_"
+  - pymdownx.emoji
+extra:
+  generator: false
